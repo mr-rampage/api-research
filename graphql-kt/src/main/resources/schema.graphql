@@ -1,0 +1,16 @@
+type Movie {
+    title: String
+    year: Int
+    imdbRating: Float
+    genres: [Genre]
+}
+
+type Genre {
+    name: String
+    movies: [Movie]
+}
+
+type Query {
+  allMovies: [Movie]
+  allGenres: [Genre]
+}

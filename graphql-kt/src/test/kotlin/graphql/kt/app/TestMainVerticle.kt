@@ -1,4 +1,4 @@
-package graphql.kt.App
+package graphql.kt.app
 
 import io.vertx.core.Vertx
 import io.vertx.junit5.VertxExtension
@@ -12,11 +12,11 @@ class TestMainVerticle {
 
   @BeforeEach
   fun deploy_verticle(vertx: Vertx, testContext: VertxTestContext) {
-    vertx.deployVerticle(MainVerticle(), testContext.succeeding<String> { _ -> testContext.completeNow() })
+    vertx.deployVerticle(MainVerticle(), testContext.succeeding { testContext.completeNow() })
   }
 
   @Test
-  fun verticle_deployed(vertx: Vertx, testContext: VertxTestContext) {
+  fun verticle_deployed(testContext: VertxTestContext) {
     testContext.completeNow()
   }
 }

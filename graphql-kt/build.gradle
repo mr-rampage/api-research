@@ -23,7 +23,7 @@ application {
 }
 
 
-def mainVerticleName = 'graphql.kt.App.MainVerticle'
+def mainVerticleName = 'graphql.kt.app.MainVerticle'
 def watchForChange = 'src/**/*'
 def doOnChange = './gradlew classes'
 
