@@ -20,14 +20,12 @@ APIs can be a framework, language, or specification. GraphQL falls under languag
 
 ## APIs to research
 
-[Code is available on this repository][1]
+[Code is available on this repository](https://github.com/mr-rampage/api-research)
 
 - GraphQL
 - gRPC
 - MQTT
 - SSB (optional)
-
-[1]: https://github.com/mr- rampage/api-research
 
 ## Research Strategy
 
