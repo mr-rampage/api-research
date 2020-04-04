@@ -18,7 +18,7 @@ class HelloClient : AbstractVerticle() {
 
     stub.sayHello(request) {
       if (it.succeeded()) {
-        println("Succeeded " + it.result().message)
+        println("Succeeded ${it.result().message}")
       } else {
         it.cause().printStackTrace()
       }

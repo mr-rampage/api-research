@@ -9,7 +9,7 @@ class HelloServer : AbstractVerticle() {
   override fun start() {
     val service = object: GreeterGrpc.GreeterVertxImplBase() {
       override fun sayHello(request: HelloRequest?, response: Promise<HelloReply>?) {
-        println("Hello " + request?.name)
+        println("Hello ${request?.name}")
         response?.complete(HelloReply.newBuilder().setMessage(request?.name).build())
       }
     }
