@@ -29,6 +29,7 @@ The main use case is for machine- to-machine communication. Google is currently 
 - Using Vert.x, Kotlin, gRPC
   - Vert.x only works with version 1.25.0 of the gRPC. Any version higher would not compile.
   - Java 8+ would require a dependency to "javax.annotation:javax.annotation-api:1.2".
+- IntelliJ flagged the generated code as invalid time to time. It could be an issue with the IDE setup.
 
 ## Conclusions
 
