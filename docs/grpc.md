@@ -26,8 +26,9 @@ The main use case is for machine- to-machine communication. Google is currently 
 
 ## Challenges
 
-- Using Vert.x, Kotlin, gRPC, Gradle was challenging due to lack of experience. The Vert.x documentation appears to be out dated and the Gradle configuration is off. It's recommended to consult the gRPC.io Kotlin examples.
-- The Vert.x documentation does not mention that the Java plugin must be used with the Gradle configuration. Without this, the gRPC generated code will fail on the compileJava step of Kotlin.
+- Using Vert.x, Kotlin, gRPC
+  - Vert.x only works with version 1.25.0 of the gRPC. Any version higher would not compile.
+  - Java 8+ would require a dependency to "javax.annotation:javax.annotation-api:1.2".
 
 ## Conclusions
 
