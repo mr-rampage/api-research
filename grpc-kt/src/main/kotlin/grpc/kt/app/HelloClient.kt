@@ -8,7 +8,7 @@ import io.vertx.grpc.VertxChannelBuilder
 class HelloClient : AbstractVerticle() {
   override fun start() {
     val channel = VertxChannelBuilder
-      .forAddress(vertx, "localhost", 8080)
+      .forAddress(vertx, "localhost", 50051)
       .usePlaintext()
       .build()
 
