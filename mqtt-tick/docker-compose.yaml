@@ -6,17 +6,22 @@ services:
     ports:
       - 1883:1883
       - 9001:9001
-  telegraf:
-    image: telegraf:alpine
-    container_name: telegraf
-    depends_on:
-      - influxdb
-      - mosquitto
   influxdb:
     image: influxdb:alpine
     container_name: influxdb
+    volumes:
+      - ./etc/influxdb/influxdb.conf:/etc/influxdb/influxdb.conf:ro
     ports:
       - 8086:8086
+  telegraf:
+    image: telegraf:alpine
+    container_name: telegraf
+    network_mode: host
+    volumes:
+      - ./etc/telegraf/telegraf.conf:/etc/telegraf/telegraf.conf:ro
+    depends_on:
+      - influxdb
+      - mosquitto
   chronograf:
     image: chronograf:alpine
     container_name: chronograf
