@@ -1,0 +1,26 @@
+version: '3'
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    ports:
+      - 1883:1883
+      - 9001:9001
+  telegraf:
+    image: telegraf:alpine
+    container_name: telegraf
+    depends_on:
+      - influxdb
+      - mosquitto
+  influxdb:
+    image: influxdb:alpine
+    container_name: influxdb
+    ports:
+      - 8086:8086
+  chronograf:
+    image: chronograf:alpine
+    container_name: chronograf
+    ports:
+      - 8888:8888
+    depends_on:
+      - influxdb
