@@ -44,15 +44,45 @@ This video pretty much summarizes the use cases and how to choose the appropriat
 
 [![IMAGE ALT TEXT](http://img.youtube.com/vi/gRZbgsmDj_0/0.jpg)](http://www.youtube.com/watch?v=gRZbgsmDj_0 "Video Title")
 
-In summary, the use cases are:
+Constraints drive the properties of the API product.
 
-### GraphQL
+Constraints are:
 
-- Backend for frontends
-- Short term projects
-- Uncertain use cases (start ups)
-- Just access to data without need for infrastructure
-- Developer experience with little effort
+- Business
+- Domain
+- Culture
+- Complexity
+
+| API/Constraint         | REST | "rest" | GraphQL | Kafka | WebSub | SOAP | gRPC | File | MQTT |
+|------------------------|------|--------|---------|-------|--------|------|------|------|------|
+| Client-Server          | ✔️    | ✔️      | ✔️       | ✔️     | ✔️      | ✔️    | ✔️    | ✔️    | ✔️    |
+| Stateless              | ✔️    | ✔️      | ✔️       | ✔️     | ✔️      |      |      |      | ✔️    |
+| Cacheable              | ✔️    | ✔️      |         |       | ✔️      |      |      |      | ✔️    |
+| Layered System         | ✔️    | ✔️      | ✔️       |       | ✔️      | ✔️    |      |      |      |
+| Code-on-demand         | ✔️    | ✔️      |         |       | ✔️      |      |      |      |      |
+| Uniform interface      | ✔️    |        | ✔️       | ✔️     | ✔️      |      |      |      |      |
+|------------------------|------|--------|---------|-------|--------|------|------|------|------|
+| Performance            | ✔️    | ✔️      | ✔️       | ✔️  *  |        |      | ✔️  * |      | ✔️  * |
+| Simplicity[1]          | ✔️  * |        | ✔️       |       | ✔️      |      | ✔️    |      | ✔️  * |
+| Scalability            | ✔️  * | ✔️      |         | ✔️  *  | ✔️      |      |      |      | ✔️    |
+| Modifiability          | ✔️  * |        |         |       | ✔️  *   |      |      |      |      |
+| Visibility             | ✔️    | ✔️      | ✔️       | ✔️     | ✔️      | ✔️    |      |      |      |
+| Portability            | ✔️    | ✔️      |         |       | ✔️      |      |      |      | ✔️    |
+| Reliability            | ✔️  * | ✔️      | ✔️       | ✔️  *  | ✔️      |      | ✔️    |      | ✔️  * |
+| Discoverability        | ✔️    |        | ✔️       | ✔️     | ✔️  *   | ✔️    |      |      |       |
+| Type-safety            |      |        | ✔️  *    | ✔️     |        |      | ✔️  * |      |      |
+| Ease of Development    |      |        | ✔️  *    |       |        |      |      | ✔️    | ✔️    |
+| Cost                   |      |        | ✔️  *    |       |        |      |      | ✔️    | ✔️    |
+|------------------------|------|--------|---------|-------|--------|------|------|------|------|
+| Maturity               | ✔️    | ✔️      | ✔️       |       | ✔️      | ✔️    | ✔️    | ✔️    | ✔️    |
+| Enterprise Readiness   | ✔️    | ✔️      |         | ✔️     | ✔️      | ✔️  * | ✔️    | ✔️    | ✔️    |
+| Tooling                |      | ✔️      | ✔️  *    |       |        | ✔️    |      | ✔️    | ✔️    |
+| Community              | ✔️    |        | ✔️  *    |       |        | ✔️    | ✔️    |      | ✔️    |
+| Resources on API Style |      | ✔️      | ✔️       |       |        | ✔️    |      |      |      |
+| Ease of Publication    | ✔️    |        | ✔️       |       | ✔️      |      |      |      |      |
+
+[1] - How simple it is for a client to consume your API
+[2] - REST is using HATEOAS, "rest" is REST Level 2
 
 ## Findings
 
