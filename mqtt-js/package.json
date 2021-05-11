@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aedes": "^0.41.0",
+    "aedes": "^0.42.1",
     "mqtt": "^3.0.0"
   },
   "devDependencies": {
